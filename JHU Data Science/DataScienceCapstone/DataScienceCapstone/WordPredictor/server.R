@@ -1,0 +1,26 @@
+library(shiny)
+library(tm)
+library(ggplot2)
+
+QuadDF <- readRDS("data/QuadDF.rds")
+TriDF <- readRDS("data/TriDF.rds")
+BiDF <- readRDS("data/BiDF.rds")
+source("predict.R")
+
+shinyServer(
+  
+  function(input, output) {
+    predictedList <- reactive({ 
+        predict(input$text)
+                          })
+    output$text1 <- renderText({ 
+      #predictedList <- predict(input$text)
+      as.character( predictedList()[[1]][1])
+    })
+    
+    output$PredictionStrength <- renderPlot({
+      predictedList()[[2]]
+    })
+    
+  }
+)
