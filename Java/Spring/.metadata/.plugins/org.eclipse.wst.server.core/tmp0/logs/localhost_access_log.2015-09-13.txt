@@ -1,0 +1,4 @@
+127.0.0.1 - - [13/Sep/2015:18:31:29 +0530] "GET / HTTP/1.1" 404 994
+0:0:0:0:0:0:0:1 - - [13/Sep/2015:18:31:46 +0530] "GET /springMVCDemo/createAccount.html HTTP/1.1" 200 1101
+0:0:0:0:0:0:0:1 - - [13/Sep/2015:18:31:54 +0530] "POST /springMVCDemo/acountCreated.html HTTP/1.1" 200 1334
+0:0:0:0:0:0:0:1 - - [13/Sep/2015:18:32:07 +0530] "POST /springMVCDemo/acountCreated.html HTTP/1.1" 200 325
